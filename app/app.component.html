@@ -1,0 +1,28 @@
+<h1>Angular: trackBy Example</h1>
+
+
+<button (click)="loadCourses()">Load Courses</button>
+<ul>
+  <li *ngFor="let course of courses; trackBy: trackCourse">
+    {{ course.name }}
+  </li>
+</ul>
+
+
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of store; trackBy: trackByFn">
+      <td>{{ item.id }}</td>
+      <td>{{ item.name }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<button (click)="getNewData()">more items</button>
